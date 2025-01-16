@@ -1,0 +1,68 @@
+@import "../../../assets/colors/colors";
+@import "../../../assets/mixins/schedule";
+
+.GroupScheduleWrapper {
+  min-width: 60rem;
+  @include scheduleHeader;
+
+  .Main {
+    display: flex;
+    width: fit-content;
+    padding: 0.5rem;
+    background-color: $dark-blue;
+    border-radius: 0.5rem;
+
+    .Schedule {
+      display: flex;
+      position: relative;
+
+      .ScheduleBackground {
+        display: flex;
+        flex-flow: column;
+        background-color: $whiteish;
+
+        header {
+          height: 4rem;
+
+          p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            margin: 0;
+            padding: 0.5rem;
+            color: $whiteish;
+            background-color: $dark-blue;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-right: 1px solid $whiteish;
+          }
+        }
+
+        a {
+          width: 12rem;
+          height: 4rem;
+          border-bottom: 1px solid $dark-blue;
+          border-right: 1px solid $dark-blue;
+          cursor: pointer;
+        }
+
+        a:hover {
+          background-color: rgb(230, 230, 230);
+        }
+      }
+
+      .PatientCard {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(4rem - 1px);
+        width: calc(12rem - 1px);
+        margin: 0;
+        color: $dark-blue;
+        font-weight: 700;
+      }
+    }
+  }
+}

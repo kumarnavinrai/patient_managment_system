@@ -1,0 +1,37 @@
+@import "../../assets/colors/colors";
+@import "../../assets/mixins/schedule";
+
+@import "../../assets/colors/colors";
+
+.Scheduler {
+  position: relative;
+  width: 100%;
+  border-radius: .5rem;
+
+  .Nav {
+    display: flex;
+
+    .Link {
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+      font-size: 0.8rem;
+      color: $dark-blue;
+
+      p {
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      svg {
+        margin: 0 0.5rem;
+      }
+    }
+
+    a.active,
+    a:hover {
+      color: $whiteish;
+    }
+  }
+}

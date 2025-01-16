@@ -1,0 +1,20 @@
+@import "../../assets/colors/colors";
+@import "../../assets/mixins/pages";
+
+.Notes {
+    @include pageWrapper;
+
+    @include pageHeader;
+
+    .Main {
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1023px) {
+    .Notes {
+        @include pageWrapper1023;
+    }
+}

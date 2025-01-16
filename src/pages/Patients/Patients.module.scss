@@ -1,0 +1,27 @@
+@import "../../assets/colors/colors";
+@import "../../assets/mixins/pages";
+
+.Patients {
+    @include pageWrapper;
+
+    @include pageHeader;
+
+    @include pageNav;
+
+    .Main {
+        display: flex;
+        flex-flow: column;
+        min-height: 75vh;
+    }
+
+}
+
+@media (min-width: 1023px) {
+    .Patients {
+        @include pageWrapper1023;
+
+        .Nav {
+            overflow-x: auto;
+        }
+    }
+}

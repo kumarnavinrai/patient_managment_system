@@ -1,0 +1,23 @@
+@import "../../assets/colors/colors";
+@import "../../assets/mixins/pages";
+
+.Settings {
+    @include pageWrapper;
+
+    @include pageHeader;
+
+    @include pageNav;
+}
+
+@media (min-width: 1023px) {
+    .Settings {
+        @include pageWrapper1023;
+
+        .Header {
+            .SettingsNav {
+                overflow-x: auto;
+            }
+        }
+
+    }
+}
